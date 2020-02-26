@@ -19,6 +19,9 @@ steps:
     buildType: 'current'
     targetPath: '$(Build.SourcesDirectory)\.build'
     artifactName: drop
+    itemPattern: |
+     **
+     !darwin/**
 
 - powershell: |
     . build/azure-pipelines/win32/exec.ps1
