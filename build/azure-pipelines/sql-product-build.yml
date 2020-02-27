@@ -5,7 +5,7 @@ resources:
     endpoint: ContainerRegistry
 
 jobs:
-- job: Windows_Test
+- job: Windows_Test2
   pool:
     name: mssqltools
   steps:
