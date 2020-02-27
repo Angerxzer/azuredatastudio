@@ -48,6 +48,7 @@ jobs:
   dependsOn:
   - Linux
   - Windows
+  - macOS
   steps:
   - template: win32/sql-product-test-win32.yml
 
