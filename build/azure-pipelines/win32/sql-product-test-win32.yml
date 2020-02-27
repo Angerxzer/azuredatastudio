@@ -1,17 +1,4 @@
 steps:
-- task: DownloadPipelineArtifact@2
-  displayName: 'Download Pipeline Artifact'
-  inputs:
-    buildType: specific
-    project: 'ae14e11c-7eb2-46af-b588-471e6116d635'
-    definition: 290
-    buildVersionToDownload: specific
-    pipelineId: 56292
-    artifactName: drop
-    itemPattern: |
-     drop/extensions/**
-     drop/win32-x64/**
-
 - task: NodeTool@0
   inputs:
     versionSpec: "10.15.1"
@@ -33,8 +20,8 @@ steps:
     targetPath: '$(Build.SourcesDirectory)\.build'
     artifactName: drop
     itemPattern: |
-      extensions/**
-      win32-x64/**
+     drop/extensions/**
+     drop/win32-x64/**
 
 - powershell: |
     . build/azure-pipelines/win32/exec.ps1
