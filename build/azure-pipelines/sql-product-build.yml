@@ -5,6 +5,12 @@ resources:
     endpoint: ContainerRegistry
 
 jobs:
+- job: Windows_Test
+  pool:
+    name: mssqltools
+  steps:
+  - template: win32/sql-product-test-win32.yml
+
 - job: Compile
   pool:
     vmImage: 'Ubuntu-16.04'
